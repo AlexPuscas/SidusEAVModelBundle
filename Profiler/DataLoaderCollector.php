@@ -8,9 +8,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\DataCollector\DataCollector;
 use Symfony\Component\VarDumper\Cloner\Data;
 
-/**
- * @method reset()
- */
 class DataLoaderCollector extends DataCollector
 {
     /** @var array|Data */
@@ -76,4 +73,18 @@ class DataLoaderCollector extends DataCollector
     {
         return 'sidus_data_loader';
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function reset()
+    {
+        // Todo: Is this method correctly implemented?
+        $this->data = [
+            'nodes' => [],
+            'count' => null,
+        ];
+        $this->builtNodeIds = [];
+    }
 }
+
