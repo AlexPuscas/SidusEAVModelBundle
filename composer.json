@@ -1,6 +1,6 @@
 {
     "name": "sidus/eav-model-bundle",
-    "description": "Symfony3 & Doctrine implementation of a Entity-Attribute-Value model, easily extendable",
+    "description": "Symfony & Doctrine implementation of a Entity-Attribute-Value model, easily extendable",
     "keywords": [
         "eav",
         "doctrine",
@@ -23,14 +23,21 @@
         }
     },
     "require": {
-        "php": ">=5.6",
+        "php": ">=7.2",
         "ext-mbstring": "*",
-        "symfony/symfony": "^4.0|^3.0|^2.8",
-        "doctrine/orm": "^2.5",
-        "doctrine/doctrine-bundle": "^1.6",
+        "symfony/dependency-injection": "^4.1",
+        "symfony/config": "~4.1",
+        "symfony/validator": "^4.1",
+        "symfony/yaml": "^4.1",
+        "symfony/property-access": "^4.1",
+        "symfony/translation": "^4.1",
+        "doctrine/orm": "^2.6",
+        "doctrine/doctrine-bundle": "^1.9",
         "sidus/base-bundle": "~1.0"
     },
     "suggest": {
+        "sidus/eav-form-bundle": "Symfony form support",
         "sidus/eav-bootstrap-bundle": "Easy Twitter Bootstrap integration"
     }
 }
+
